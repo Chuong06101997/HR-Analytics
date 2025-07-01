@@ -256,9 +256,37 @@ employment.info()
 ```
 ![image](https://github.com/user-attachments/assets/528f7918-b856-4301-9f71-fc5848707123)
 
+### 3.Load Data
+3.1 Manually Inserting DataFrames into SQLite
+```
+db_path = 'data_warehouse.db'
+engine = create_engine(f'sqlite:///{db_path}')
+enrollies_data.to_sql('dim_enrollies_data', engine, if_exists = 'replace', index = False)
+enrollies_education.to_sql('fact_enrollies_education', engine, if_exists = 'replace', index = False)
+work_experience.to_sql('dim_work_experience', engine, if_exists = 'replace', index = False)
+cities.to_sql('dim_cities', engine, if_exists = 'replace', index = False)
+employment.to_sql('dim_enrollies', engine, if_exists = 'replace', index = False)
+```
+3.2 Refactoring DataFrame to SQL Insertion with SQLAlchemy
+```
+from sqlalchemy import create_engine
+```
+```
+def save_to_sql(tables, db_path='data_warehouse.db'):
+    engine = create_engine(f'sqlite:///{db_path}')
+    for df, table_name in tables:
+        df.to_sql(table_name, engine, if_exists='replace', index=False)
 
+tables_to_save = [
+    (enrollies_data, 'dim_enrollies_data'),
+    (enrollies_education, 'dim_enrollies_education'),
+    (work_experience, 'dim_work_experience'),
+    (cities, 'dim_cities'),
+    (employment, 'fact_enrollies')
+]
 
-
+save_to_sql(tables_to_save)
+```
 
 
 
