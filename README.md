@@ -139,6 +139,116 @@ training_hours.head()
 ```
 ![image](https://github.com/user-attachments/assets/c4db82d7-f96f-443c-8fe1-4adad87a99d3)
 
+1.5 City development index
+```
+table = pd.read_html('https://sca-programming-school.github.io/city_development_index/index.html')
+cities = table[0]
+cities.head()
+```
+![image](https://github.com/user-attachments/assets/2a727c35-d7b2-4646-92ae-81d3fc0cdd8b)
+
+1.6 Employment
+```
+employment = pd.read_sql_table('employment',engine)
+employment.head()
+```
+![image](https://github.com/user-attachments/assets/d5f3a0bf-b86c-4444-bfcc-d4a292263e89)
+
+### 2. Transform Data
+2.1 Enrollies' Data
+``` enrollies_data.info() ```
+![image](https://github.com/user-attachments/assets/50e8e069-95c9-4f36-9a5d-4115a3e373b5)
+### Fix Data Type
+```
+enrollies_data['full_name'] = enrollies_data['full_name'].astype('string')
+enrollies_data['city'] = enrollies_data['city'].astype('category')
+enrollies_data['gender'] = enrollies_data['gender'].astype('category')
+```
+### Fill Missing Value
+``` gender_mode = enrollies_data['gender'].mode()[0] ```
+```
+enrollies_data['gender'] = enrollies_data['gender'].fillna(gender_mode)
+```
+``` enrollies_data.info() ```
+
+![image](https://github.com/user-attachments/assets/9fff605f-8835-422b-9490-df535b0dbe7b)
+
+2.2 enrollies_education
+```
+enrollies_education.info()
+```
+![image](https://github.com/user-attachments/assets/bcd868ef-ea62-4efb-9a22-9875506df111)
+
+### Fix Data Type
+```
+enrollies_education['enrolled_university'] = enrollies_education['enrolled_university'].astype('string')
+enrollies_education['education_level'] = enrollies_education['education_level'].astype('category')
+enrollies_education['major_discipline'] = enrollies_education['major_discipline'].astype('string')
+```
+### Fill Missing Value
+```
+enrollies_education['enrolled_university'] = enrolled_university.fillna('no_enrollment')
+enrollies_education['major_discipline'] = major_discipline.fillna('No Major')
+education_level_mode = enrollies_education['education_level'].mode()[0]
+enrollies_education['education_level'] = enrollies_education['education_level'].fillna(education_level_mode)
+```
+```
+enrollies_education.info()
+```
+![image](https://github.com/user-attachments/assets/7aa0ee40-9d12-49ad-8e42-80cbc9990d99)
+2.3 Work_experience
+```
+work_experience.info()
+```
+![image](https://github.com/user-attachments/assets/fc6ed19f-e077-4f59-9981-52dd77cad022)
+### Fix data type
+```
+work_experience['relevent_experience'] = work_experience['relevent_experience'].astype('category')
+work_experience['experience'] = work_experience['experience'].astype('category')
+work_experience['company_size'] = work_experience['company_size'].astype('category')
+work_experience['company_type'] = work_experience['company_type'].astype('category')
+work_experience['last_new_job'] = work_experience['last_new_job'].astype('category')
+```
+### Fill Missing Value
+```
+experience = work_experience['experience'].mode()[0]
+work_experience['experience'] = work_experience['experience'].fillna(experience)
+company_size = work_experience['company_size'].mode()[0]
+work_experience['company_size'] = work_experience['company_size'].fillna(company_size)
+company_type = work_experience['company_type'].mode()[0]
+work_experience['company_type'] = work_experience['company_type'].fillna(company_type)
+last_new_job = work_experience['last_new_job'].mode()[0]
+work_experience['last_new_job'] = work_experience['last_new_job'].fillna(last_new_job)
+```
+```
+work_experience.info()
+```
+![image](https://github.com/user-attachments/assets/d22e33eb-9fed-4e8f-9dd3-ef2b4748fcd5)
+
+2.4 Training_hours
+```
+training_hours.info()
+```
+![image](https://github.com/user-attachments/assets/4b58f23a-fc2a-45f3-b896-3ae58472b3cb)
+
+2.5 Cities
+```
+cities.info()
+```
+![image](https://github.com/user-attachments/assets/36957c5f-084c-4f07-ace6-ffd7269b48be)
+
+### Fix Data Type
+```
+cities['City'] = cities['City'].astype('string')
+cities.info()
+```
+![image](https://github.com/user-attachments/assets/4f4d8b50-1152-4d30-af72-82954a35411e)
+
+2.6 Employment
+```
+employment.info()
+```
+![image](https://github.com/user-attachments/assets/528f7918-b856-4301-9f71-fc5848707123)
 
 
 
