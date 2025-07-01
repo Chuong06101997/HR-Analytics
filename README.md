@@ -179,6 +179,10 @@ enrollies_data['full_name'] = enrollies_data['full_name'].astype('string')
 enrollies_data['city'] = enrollies_data['city'].astype('category')
 enrollies_data['gender'] = enrollies_data['gender'].astype('category')
 ```
+> Object-type columns were converted to either `string` or `category` for consistency and efficiency:
+>- Columns containing free text (e.g., names) were cast to `string` for better readability and string operations.
+>- Columns with a limited set of repeated values were cast to `category` to reduce memory usage and prepare for potential encoding in future analysis.
+
 ### Fill Missing Value
 ``` gender_mode = enrollies_data['gender'].mode()[0] ```
 ```
@@ -210,6 +214,10 @@ enrollies_education['enrolled_university'] = enrollies_education['enrolled_unive
 enrollies_education['education_level'] = enrollies_education['education_level'].astype('category')
 enrollies_education['major_discipline'] = enrollies_education['major_discipline'].astype('string')
 ```
+>Object-type columns were converted to either `string` or `category` for consistency and efficiency:
+>- Columns containing free text (e.g., names) were cast to `string` for better readability and string operations.
+>- Columns with a limited set of repeated values were cast to `category` to reduce memory usage and prepare for potential encoding in future analysis.
+
 ### Fill Missing Value
 ```
 enrollies_education['enrolled_university'] = enrolled_university.fillna('no_enrollment')
@@ -217,6 +225,10 @@ enrollies_education['major_discipline'] = major_discipline.fillna('No Major')
 education_level_mode = enrollies_education['education_level'].mode()[0]
 enrollies_education['education_level'] = enrollies_education['education_level'].fillna(education_level_mode)
 ```
+>Two specific columns were treated as exceptions during missing value imputation:
+>- `enrolled_university`: missing values were filled with `'no_enrollment'` to indicate that the person is not currently enrolled in any university. This label provides a meaningful and interpretable category instead of using the mode.
+>- `major_discipline`: missing values were filled with `'No Major'` to explicitly represent that the individual does not have a specific major field of study. Using a descriptive placeholder avoids ambiguity and improves clarity.
+>- `education_level`: missing values were filled with the mode to preserve the existing distribution and avoid introducing bias.
 ```
 enrollies_education.info()
 ```
@@ -246,7 +258,7 @@ work_experience['company_size'] = work_experience['company_size'].astype('catego
 work_experience['company_type'] = work_experience['company_type'].astype('category')
 work_experience['last_new_job'] = work_experience['last_new_job'].astype('category')
 ```
-### Fill Missing Value
+> All relevant columns in the work_experience table were converted to `category` type to reduce memory usage and improve processing efficiency, as they contain repeated discrete values.
 ```
 experience = work_experience['experience'].mode()[0]
 work_experience['experience'] = work_experience['experience'].fillna(experience)
@@ -257,6 +269,10 @@ work_experience['company_type'] = work_experience['company_type'].fillna(company
 last_new_job = work_experience['last_new_job'].mode()[0]
 work_experience['last_new_job'] = work_experience['last_new_job'].fillna(last_new_job)
 ```
+>Missing values in categorical columns were filled with the mode (most frequent value) because:
+>- It preserves the existing distribution of the data
+>- It's a simple and effective strategy when no additional context is available.
+
 ```
 work_experience.info()
 ```
@@ -285,6 +301,8 @@ cities.info()
 cities['City'] = cities['City'].astype('string')
 cities.info()
 ```
+>The `City` column was converted to `string` type to preserve text format and ensure compatibility with string operations.
+
 ![image](https://github.com/user-attachments/assets/4f4d8b50-1152-4d30-af72-82954a35411e)
 
 2.6 Employment
