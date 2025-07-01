@@ -114,7 +114,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 import pymysql
 ```
-### 1.Extract
+### 1. Extract
 1.1 Enrollies' data
 ```
 google_sheet_id = '1VCkHwBjJGRJ21asd9pxW4_0z2PWuKhbLR3gUHm-p4GI'
