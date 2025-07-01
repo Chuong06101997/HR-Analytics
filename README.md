@@ -1,5 +1,7 @@
 #  HR Analytics: Job Change of Data Scientists
 ## Introduction
+![image](https://github.com/user-attachments/assets/fba35d28-afd0-4314-9270-7d7ad3105853)
+
 
 A company specializing in Big Data and Data Science runs training programs to prepare potential candidates for data-related roles. While many individuals participate, not all intend to work for the company after training.
 
