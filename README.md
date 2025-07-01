@@ -86,13 +86,19 @@ From LMS database you can also retrieve the fact of employment. If student is ma
 
 Database credentials:
 
-`Database type: MySQL
-Host: 112.213.86.31
-Port: 3360
-Login: etl_practice
-Password: 550814
-Database name: company_course
-Table name: employment`
+`Database type: MySQL`
+
+`Host: 112.213.86.31`
+
+`Port: 3360`
+
+`Login: etl_practice`
+
+`Password: 550814`
+
+`Database name: company_course`
+
+`Table name: employment`
 
 
 
