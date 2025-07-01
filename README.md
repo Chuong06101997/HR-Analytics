@@ -13,7 +13,11 @@ The dataset includes:
 ## Data Description
 1. Enrollies' data
 As enrollies are submitting their request to join the course via Google Forms, we have the Google Sheet that stores data about enrolled students, containing the following columns:
+
 `enrollee_id`: unique ID of an enrollee
+
 `full_name`: full name of an enrollee
+
 `city`: the name of an enrollie's city
+
 `gender`: gender of an enrollee
