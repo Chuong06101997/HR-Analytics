@@ -117,6 +117,28 @@ enrollies_data.head()
 ```
 ![image](https://github.com/user-attachments/assets/a309f2e6-96b8-40e7-abe5-7d16a4ae19f2)
 
+1.2 Enrollies' education
+```
+enrollies_education = pd.read_excel('/content/enrollies_education (1).xlsx')
+enrollies_education
+```
+![image](https://github.com/user-attachments/assets/fbdb5667-3cdd-4788-9e66-52158081cd18)
+
+1.3 Enrollies' working experience
+```
+work_experience = pd.read_csv('/content/work_experience (1).csv')
+work_experience
+```
+![image](https://github.com/user-attachments/assets/19304fac-4c8b-4b7a-b799-70488d688420)
+
+1.4 Training hours
+```
+engine = create_engine('mysql+pymysql://etl_practice:550814@112.213.86.31:3360/company_course')
+training_hours = pd.read_sql_table('training_hours', engine)
+training_hours.head()
+```
+![image](https://github.com/user-attachments/assets/c4db82d7-f96f-443c-8fe1-4adad87a99d3)
+
 
 
 
