@@ -162,11 +162,11 @@ employment.head()
 
 ![image](https://github.com/user-attachments/assets/50e8e069-95c9-4f36-9a5d-4115a3e373b5)
 
->`gender`: has missing values (~4,500 rows); currently of type object, should be converted to category
+>`gender`: has missing values (~4,500 rows) => missing values need to be handled, currently of type object, it should be converted to category
 
->`full_name`: no missing values; of type object, should be converted to string
+>`full_name`: currently of type object, it should be converted to string 
 
->`city`: no missing values; of type object, should be converted to category
+>`city`: currently of type object, it should be converted to category
 
 ### Fix Data Type
 ```
@@ -187,7 +187,13 @@ enrollies_data['gender'] = enrollies_data['gender'].fillna(gender_mode)
 ```
 enrollies_education.info()
 ```
+>`enrolled_university`: has missing values => missing values need to be handled, currently of type object, it should be converted to string
+
+>`education_level`: has missing values => missing values need to be handled, currently of type object, it should be converted to category
+
+>`major_discipline`: has missing values => missing values need to be handled, currently of type object, it should be converted to string
 ![image](https://github.com/user-attachments/assets/bcd868ef-ea62-4efb-9a22-9875506df111)
+
 
 ### Fix Data Type
 ```
@@ -212,6 +218,16 @@ enrollies_education.info()
 work_experience.info()
 ```
 ![image](https://github.com/user-attachments/assets/fc6ed19f-e077-4f59-9981-52dd77cad022)
+
+>`relevent_experience`: no missing values, currently of type object, it should be converted to category
+
+>`experience`: has missing values => missing values need to be handled, currently of type object, it should be converted to category
+
+>`company_size`: has missing values => missing values need to be handled, currently of type object, it should be converted to category
+
+>`company_type`: has missing values => missing values need to be handled, currently of type object, it should be converted to category
+
+>`last_new_job`: has missing values => missing values need to be handled, currently of type object, it should be converted to category
 
 ### Fix data type
 ```
@@ -243,11 +259,17 @@ training_hours.info()
 ```
 ![image](https://github.com/user-attachments/assets/4b58f23a-fc2a-45f3-b896-3ae58472b3cb)
 
+>`training_hours`: no missing values, already in numeric format, no data cleaning required.
+
 2.5 Cities
 ```
 cities.info()
 ```
 ![image](https://github.com/user-attachments/assets/36957c5f-084c-4f07-ace6-ffd7269b48be)
+
+>`City`: no missing values, currently of type object, it should be converted to string
+
+>`City Development Index`: no missing values, already in numeric format, no data cleaning required
 
 ### Fix Data Type
 ```
@@ -261,6 +283,10 @@ cities.info()
 employment.info()
 ```
 ![image](https://github.com/user-attachments/assets/528f7918-b856-4301-9f71-fc5848707123)
+
+>`enrollee_id`: no missing values, already in integer format, no data cleaning required.
+
+>`employed`: no missing values, already in numeric format (float), no data cleaning required.
 
 ### 3.Load Data
 3.1 Manually Inserting DataFrames into SQLite
