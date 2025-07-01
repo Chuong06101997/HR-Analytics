@@ -162,11 +162,11 @@ employment.head()
 
 ![image](https://github.com/user-attachments/assets/50e8e069-95c9-4f36-9a5d-4115a3e373b5)
 
-`gender`: has missing values (~4,500 rows); currently of type object
+>`gender`: has missing values (~4,500 rows); currently of type object, should be converted to category
 
-`full_name`: no missing values; of type object, should be converted to string
+>`full_name`: no missing values; of type object, should be converted to string
 
-`city`: no missing values; of type object, should be converted to category
+>`city`: no missing values; of type object, should be converted to category
 
 ### Fix Data Type
 ```
