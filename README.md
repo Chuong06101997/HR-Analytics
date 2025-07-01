@@ -197,8 +197,8 @@ enrollies_education.info()
 >`education_level`: has missing values => missing values need to be handled, currently of type object, it should be converted to category
 
 >`major_discipline`: has missing values => missing values need to be handled, currently of type object, it should be converted to string
-![image](https://github.com/user-attachments/assets/bcd868ef-ea62-4efb-9a22-9875506df111)
 
+![image](https://github.com/user-attachments/assets/bcd868ef-ea62-4efb-9a22-9875506df111)
 
 ### Fix Data Type
 ```
