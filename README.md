@@ -99,6 +99,35 @@ Database credentials:
 `Database name: company_course`
 
 `Table name: employment`
+# ELT Process
+## Import Libraries
+```
+import pandas as pd
+!pip install pymysql
+from sqlalchemy import create_engine
+import pymysql
+```
+### 1.Extract
+1.1 Enrollies' data
+```
+google_sheet_id = '1VCkHwBjJGRJ21asd9pxW4_0z2PWuKhbLR3gUHm-p4GI'
+url = 'https://docs.google.com/spreadsheets/d/'+ google_sheet_id+ '/export?format=xlsx'
+enrollies_data = pd.read_excel(url, sheet_name = 'enrollies')
+enrollies_data.head()
+```
+![image](https://github.com/user-attachments/assets/a309f2e6-96b8-40e7-abe5-7d16a4ae19f2)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
