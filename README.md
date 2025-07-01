@@ -55,7 +55,9 @@ This table contains the following columns:
 `company_type`: Indicates the type of company where the enrollee has worked. Examples include Pvt Ltd, Funded Startup, etc.
 
 `last_new_job`: Represents the number of years since the enrollee's last job change. Examples include never, >4, 1, etc.
+
 ### 4. Training hours
+
 From LMS system's database you can retrieve a number of training hours for each student that they have completed.
 
 Database credentials:
@@ -157,7 +159,9 @@ employment.head()
 ### 2. Transform Data
 2.1 Enrollies' Data
 ``` enrollies_data.info() ```
+
 ![image](https://github.com/user-attachments/assets/50e8e069-95c9-4f36-9a5d-4115a3e373b5)
+
 ### Fix Data Type
 ```
 enrollies_data['full_name'] = enrollies_data['full_name'].astype('string')
@@ -196,11 +200,13 @@ enrollies_education['education_level'] = enrollies_education['education_level'].
 enrollies_education.info()
 ```
 ![image](https://github.com/user-attachments/assets/7aa0ee40-9d12-49ad-8e42-80cbc9990d99)
+
 2.3 Work_experience
 ```
 work_experience.info()
 ```
 ![image](https://github.com/user-attachments/assets/fc6ed19f-e077-4f59-9981-52dd77cad022)
+
 ### Fix data type
 ```
 work_experience['relevent_experience'] = work_experience['relevent_experience'].astype('category')
