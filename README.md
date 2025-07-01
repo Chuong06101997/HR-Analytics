@@ -12,6 +12,9 @@ The dataset includes:
 - Work experience
 - Training enrollment and job change status
 
+![image](https://github.com/user-attachments/assets/51249091-11a9-4911-9b12-db23ede8eecf)
+
+
 ## Data Description
 ### 1. Enrollies' data
 As enrollies are submitting their request to join the course via Google Forms, we have the Google Sheet that stores data about enrolled students, containing the following columns:
