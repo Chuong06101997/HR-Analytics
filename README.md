@@ -21,8 +21,11 @@ As enrollies are submitting their request to join the course via Google Forms, w
 `city`: the name of an enrollie's city
 
 `gender`: gender of an enrollee
+
 Source : <https://docs.google.com/spreadsheets/d/1VCkHwBjJGRJ21asd9pxW4_0z2PWuKhbLR3gUHm-p4GI/edit?usp=sharing>
+
 ### 2.  Enrollies' education
+
 After enrollment everyone should fill the form about their education level. This form is being digitalized manually. Educational department stores it in the Excel format here: <https://assets.swisscoding.edu.vn/company_course/enrollies_education.xlsx>
 
 This table contains the following columns:
@@ -57,13 +60,20 @@ From LMS system's database you can retrieve a number of training hours for each 
 
 Database credentials:
 
-Database type: MySQL
-Host: 112.213.86.31
-Port: 3360
-Login: etl_practice
-Password: 550814
-Database name: company_course
-Table name: training_hours
+```Database type: MySQL```
+
+```Host: 112.213.86.31```
+
+```Port: 3360```
+
+```Login: etl_practice```
+
+```Password: 550814```
+
+```Database name: company_course```
+
+```Table name: training_hours```
+
 ### 5. City development index
 Another source that can be usefull is the table of City development index.
 
