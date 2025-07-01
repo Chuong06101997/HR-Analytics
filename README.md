@@ -184,9 +184,10 @@ enrollies_data['gender'] = enrollies_data['gender'].astype('category')
 ```
 enrollies_data['gender'] = enrollies_data['gender'].fillna(gender_mode)
 ```
-=> Missing values in categorical columns were filled with the mode (most frequent value) because:
-- It preserves the existing distribution of the data
-- It's a simple and effective strategy when no additional context is available
+>=> Missing values in categorical columns were filled with the mode (most frequent value) because:
+>- It preserves the existing distribution of the data
+>- It's a simple and effective strategy when no additional context is available
+
 ``` enrollies_data.info() ```
 
 ![image](https://github.com/user-attachments/assets/9fff605f-8835-422b-9490-df535b0dbe7b)
