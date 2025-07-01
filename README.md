@@ -333,7 +333,6 @@ To automate the ETL process, you can run the script regularly using **Google Col
 1. Right-click the file in Google Drive → **Open with** → **Colaboratory**
 
 ### Step 3: Use built-in scheduling tools
-You have 2 options:
 
 #### Use [Google Apps Script](https://script.google.com/)
 1. Create a new Apps Script project
