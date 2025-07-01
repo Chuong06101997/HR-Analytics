@@ -321,6 +321,31 @@ tables_to_save = [
 
 save_to_sql(tables_to_save)
 ```
+# How to Schedule the Script using Google Colab and Google Drive
+
+To automate the ETL process, you can run the script regularly using **Google Colab + Google Drive**:
+
+### Step 1: Upload your script to Google Drive
+1. Save your ETL script as `etl_script.ipynb` or `etl_script.py`
+2. Upload it to a folder in your Google Drive
+
+### Step 2: Open it with Google Colab
+1. Right-click the file in Google Drive → **Open with** → **Colaboratory**
+
+### Step 3: Use built-in scheduling tools
+You have 2 options:
+
+#### Use [Google Apps Script](https://script.google.com/)
+1. Create a new Apps Script project
+2. Paste this code:
+```javascript
+function runETL() {
+  var url = 'PASTE_YOUR_COLAB_URL_HERE';
+  UrlFetchApp.fetch(url);
+}
+Set up a trigger to run runETL() daily via:
+```
+Triggers → Add Trigger → Time-based → e.g., every day at 9am
 
 
 
