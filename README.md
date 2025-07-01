@@ -9,16 +9,11 @@ The dataset includes:
 - Education and major discipline
 - Work experience
 - Training enrollment and job change status
-  ## Data Description
 
-The dataset was sourced from XYZ (or Kaggle, etc.) and includes the following columns:
-
-- `city`: Candidate's current city
-- `gender`: Gender of the candidate
-- `education_level`: Highest education level
-- `major_discipline`: Candidate’s major in education
-- `experience`: Total years of experience
-- `enrolled_university`: Enrollment status in university
-- `training_hours`: Hours spent on training
-- `relevent_experience`: Whether candidate has relevant experience
-- `target`: 1 if the candidate is looking for a new job, 0 otherwise
+## Data Description
+1. Enrollies' data
+As enrollies are submitting their request to join the course via Google Forms, we have the Google Sheet that stores data about enrolled students, containing the following columns:
+`enrollee_id`: unique ID of an enrollee
+`full_name`: full name of an enrollee
+`city`: the name of an enrollie's city
+`gender`: gender of an enrollee
